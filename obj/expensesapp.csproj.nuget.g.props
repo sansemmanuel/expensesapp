@@ -20,5 +20,8 @@
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <PkgMicrosoft_CodeAnalysis_Analyzers Condition=" '$(PkgMicrosoft_CodeAnalysis_Analyzers)' == '' ">C:\Users\emmanuel\.nuget\packages\microsoft.codeanalysis.analyzers\3.3.3</PkgMicrosoft_CodeAnalysis_Analyzers>
     <PkgMicrosoft_EntityFrameworkCore_Tools Condition=" '$(PkgMicrosoft_EntityFrameworkCore_Tools)' == '' ">C:\Users\emmanuel\.nuget\packages\microsoft.entityframeworkcore.tools\8.0.1</PkgMicrosoft_EntityFrameworkCore_Tools>
+    <PkgChinchilla_StateManagement Condition=" '$(PkgChinchilla_StateManagement)' == '' ">C:\Users\emmanuel\.nuget\packages\chinchilla.statemanagement\4.2.11</PkgChinchilla_StateManagement>
+    <PkgChinchilla_Logging Condition=" '$(PkgChinchilla_Logging)' == '' ">C:\Users\emmanuel\.nuget\packages\chinchilla.logging\5.1.40</PkgChinchilla_Logging>
+    <PkgCqrs Condition=" '$(PkgCqrs)' == '' ">C:\Users\emmanuel\.nuget\packages\cqrs\5.1.0.44</PkgCqrs>
   </PropertyGroup>
 </Project>
