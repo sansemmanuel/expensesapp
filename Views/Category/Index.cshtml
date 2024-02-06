@@ -11,7 +11,7 @@
         <ejs-grid id="categories" dataSource="@Model">
             <e-grid-columns>
                 <e-grid-column headerText="Category" field="TitleWithIcon"></e-grid-column>
-                 <e-grid-column headerText="Type" field="Type"></e-grid-column>
+                <e-grid-column headerText="Type" template="#typeColumnTemplate"></e-grid-column>
                  <e-grid-column headerText="Actions" field=""></e-grid-column>
 
             </e-grid-columns>
@@ -22,3 +22,7 @@
             <i class="fa-solid fa-shapes fa-2xl"></i>
         </div>
 </div>
+
+    <script id="typeColumnTemplate" type="text/x-template">
+        <span class="badge"${Type}></span>
+    </script>
