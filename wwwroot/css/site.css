@@ -26,6 +26,14 @@ body {
     font-size: x-large;
 }
 
+/*grid*/
+.e-grid {
+    border: 0;
+    border-radius: 5px; 
+}
+    .e-grid .e-gridcontent, .e-grid .e-table{
+        background-color: #1a222b;
+    }
 /*radio button g*/
 
 .e-btn-group.custom-rbt-group{
