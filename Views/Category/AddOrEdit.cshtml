@@ -1,6 +1,7 @@
 ﻿@model expensesapp.Models.Category
 
 @{
+    ViewData["PageTitle"] = Model.CategoryId == 0 ? "Create a new Category" : "Edit Category";
 }
 <div class="row">
     <div class="col-md-7">
