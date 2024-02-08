@@ -46,10 +46,10 @@ namespace expensesapp.Controllers
         public IActionResult AddOrEdit(int id=0)
         {
             if (id==0)
-            return View(new Category());
+                return View(new Category());
             else 
                 return View(_context.Categories.Find(id));
-            }
+        }
 
         // POST: Category/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
@@ -62,8 +62,8 @@ namespace expensesapp.Controllers
             {
                 if(category.CategoryId ==0)
                 _context.Add(category);
-                else 
-                    _context.Update(category);      
+                else
+                    _context.Update(category);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
