@@ -36,12 +36,15 @@
         <a class="btn btn-sm no-a-decoration" href="Category/AddOrEdit/${CategoryId}">
         <i class="fa-solid fa-pen fa-lg"></i>
       </a>
-      <form  action="/Category/Delete/${CategoryId}" method="post">
-          <button type="submit" class="btn btn-sm btn-link no-a-decoration">
-              <i class="fa-solid fa-trashcaption-top fa-lg text-danger">
-                  </i>
-                 </button>
-              </form>
+              <form action="/Category/Delete/${CategoryId}" method="post">
+    @Html.AntiForgeryToken()
+        <button type="submit" class="btn btn-sm btn-link no-a-decoration"
+                onclick="return confirm(&quot;Estás seguro de eliminar este registro?&quot;)">
+            <i class="fa-solid fa-trash-can fa-lg text-danger"></i>
+        </button>
+    </form>
+
+
       
       </div>
           
