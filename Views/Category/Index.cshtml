@@ -4,11 +4,12 @@
     ViewData["Title"] = "Categories";
 }
 
-<h1>Categories</h1>
+<h2>Categories</h2>
 
 <div class="row ">
     <div class=" col-md-7">
-        <ejs-grid id="categories" dataSource="@Model">
+        <ejs-grid id="categories" dataSource="@Model" allowSorting="true" allowPaging="true">
+          
             <e-grid-columns>
                 <e-grid-column headerText="Category" field="TitleWithIcon"></e-grid-column>
                 <e-grid-column headerText="Type" template="#typeColumnTemplate"></e-grid-column>
