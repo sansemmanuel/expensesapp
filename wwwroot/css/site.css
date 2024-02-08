@@ -15,8 +15,12 @@ html {
 html {
   position: relative;
   min-height: 100%;
+    font-family: "Ubuntu"
 }
-
+*:not(.fa-solid):not(.fa):not(.e-icons)
+{
+    font-family: "Ubuntu"
+}
 body {
     margin-bottom: 60px;
     background-color: #0D1117;
