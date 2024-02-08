@@ -30,6 +30,20 @@ body {
     font-size: x-large;
 }
 
+
+/*button PEN*/
+.btn:focus, .btn:active
+{
+    outline:none !important;
+    box-shadow:none;
+
+}
+/*hyperlonk PEN*/
+.no-a-decoration, .no-a-decoration:hover{
+    text-decoration:none;
+    color:inherit;
+}
+
 /*grid*/
 .e-grid {
     border: 0;
