@@ -30,7 +30,11 @@ body {
     font-size: x-large;
 }
 
-
+/*breadcrumb*/
+.e-breadcrumb a, e-breadcrumb a:hover {
+    text-decoration: none !important;
+    color : inherit !important;
+}
 /*button PEN*/
 .btn:focus, .btn:active
 {
