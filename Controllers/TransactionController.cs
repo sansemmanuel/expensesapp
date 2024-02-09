@@ -46,7 +46,7 @@ namespace expensesapp.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["CategoryId"] = new SelectList(_context.Categories, "CategoryId", "CategoryId", transaction.CategoryId);
+            PopulateCats();
             return View(transaction);
         }
 
