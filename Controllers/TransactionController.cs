@@ -26,11 +26,11 @@ namespace expensesapp.Controllers
         }
 
         
-        // GET: Transaction/Create
-        public IActionResult Create()
+        // GET: Transaction/AddOrEdit
+        public IActionResult AddOrEdit()
         {
             ViewData["CategoryId"] = new SelectList(_context.Categories, "CategoryId", "CategoryId");
-            return View();
+            return View(new Transaction());
         }
 
         // POST: Transaction/Create
