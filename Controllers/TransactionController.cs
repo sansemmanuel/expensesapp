@@ -29,8 +29,8 @@ namespace expensesapp.Controllers
         // GET: Transaction/AddOrEdit
         public IActionResult AddOrEdit()
         {
-            ViewData["CategoryId"] = new SelectList(_context.Categories, "CategoryId", "CategoryId");
-            return View(new Transaction());
+            PopulateCats();
+                return View(new Transaction());
         }
 
         // POST: Transaction/Create
@@ -67,7 +67,17 @@ namespace expensesapp.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
-
-       
+        [NonAction]
+       public void PopulateCats()
+        {
+            var CatCollection = _context.Categories.ToList();
+            Category DefaultCat = new Category()
+            {
+                CategoryId = 0,
+                Title = "Choose the category"
+            };
+            CatCollection.Insert(0, DefaultCat);
+            ViewBag.Categories = CatCollection;
+        }
     }
 }
