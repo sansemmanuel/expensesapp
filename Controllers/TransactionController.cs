@@ -17,7 +17,7 @@ namespace expensesapp.Controllers
         {
             _context = context;
         }
-
+        
         // GET: Transaction
         public async Task<IActionResult> Index()
         {
@@ -27,10 +27,13 @@ namespace expensesapp.Controllers
 
         
         // GET: Transaction/AddOrEdit
-        public IActionResult AddOrEdit()
+        public IActionResult AddOrEdit(int id=0)
         {
             PopulateCats();
+            if (id == 0)
                 return View(new Transaction());
+            else
+                return View(_context.Transactions.Find(id));
         }
 
         // POST: Transaction/Create
@@ -38,7 +41,7 @@ namespace expensesapp.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("TransactionId,CategoryId,Amount,Note,Date")] Transaction transaction)
+        public async Task<IActionResult> AddOrEdit([Bind("TransactionId,CategoryId,Amount,Note,Date")] Transaction transaction)
         {
             if (ModelState.IsValid)
             {
