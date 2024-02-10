@@ -84,7 +84,7 @@ namespace expensesapp.Controllers
            .ToList();
             //combination of i and e
             string[] Last7days = Enumerable.Range(0, 7)
-                .Select(i => StartDate.AddDays(i).ToString("dd-MMM")
+                .Select(i => StartDate.AddDays(i).ToString("dd-MMM"))
                 .ToArray();
             return View();
 
