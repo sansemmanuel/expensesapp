@@ -32,6 +32,11 @@ body {
 .main-content {
     margin-left: auto;
 }
+/*navb*/
+nav.navbar{
+    
+}
+
 /*breadcrumb*/
 .e-breadcrumb a, e-breadcrumb a:hover {
     text-decoration: none !important;

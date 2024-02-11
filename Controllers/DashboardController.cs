@@ -79,9 +79,9 @@ namespace expensesapp.Controllers
                     day = k.First().Date.ToString("dd-MMM"),
                     expense = k.Sum(l => l.Amount)
                 })
+            .ToList();
 
-
-           .ToList();
+           
             //combination of i and e
             string[] Last7days = Enumerable.Range(0, 7)
                 .Select(i => StartDate.AddDays(i).ToString("dd-MMM"))
@@ -92,14 +92,19 @@ namespace expensesapp.Controllers
                                       into dayIncomeJoined
                                       from income in dayIncomeJoined.DefaultIfEmpty()
                                       join expense in ExpenseSummary on day equals expense.day into expenseJoined
-                                      from expense in dayIncomeJoined.DefaultIfEmpty()
+                                      from expense in expenseJoined.DefaultIfEmpty() // Cambio aquí
                                       select new
                                       {
                                           day = day,
                                           income = income == null ? 0 : income.income,
                                           expense = expense == null ? 0 : expense.expense
                                       };
-
+            //recent transactions
+            ViewBag.RecentTransactions = await _context.Transactions
+                .Include(i => i.Category)
+                .OrderByDescending(j => j.Date)
+                .Take(7)
+                .ToListAsync();
             return View();
 
         }
