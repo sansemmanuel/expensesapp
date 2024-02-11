@@ -16,7 +16,7 @@
 </head>
 <body class="e-bigger">
    <partial name="_SideBar" />
-   
+
     <div class="main-content"></div>
     <div class="container mt-5">
         <div class=" row justify-content-center">
@@ -40,7 +40,8 @@
                     </div>
                    <ejs-breadcrumb id="breadcrumb" separatorTemplate="@Html.Raw("<span class='fa-solid fa-angle-right'></span>")"></ejs-breadcrumb>
                    </div>
-                    
+                    <button class="toggle-sidebar-button">
+                    </button>
                     @RenderBody()
                 </main>
             </div>

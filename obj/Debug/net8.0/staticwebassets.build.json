@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "8ns/wqxXoeiNpWOoq9ansjsnwANwE8pV2YFJn1LEmBM=",
+  "Hash": "+9Fo4gCH6XFZZ5lS8POAs8PCf/DSXw3bb2FV/VuwmdI=",
   "Source": "expensesapp",
   "BasePath": "_content/expensesapp",
   "Mode": "Default",
@@ -1231,6 +1231,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\emmanuel\\Desktop\\expensesapp\\wwwroot\\logo.png",
+      "SourceId": "expensesapp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\emmanuel\\Desktop\\expensesapp\\wwwroot\\",
+      "BasePath": "_content/expensesapp",
+      "RelativePath": "logo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\logo.png"
     }
   ]
 }

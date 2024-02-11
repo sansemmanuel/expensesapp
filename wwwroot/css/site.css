@@ -71,22 +71,25 @@ nav.navbar{
 
 .custom-rbt-group label.e-btn {
     box-shadow: none !important;
-    border: 1px solid #fff;
+    border: 1px solid #12161d;
     background-color: rgb(34 43 51);
-    color: #fff
+    color: #12161d
 }
 
-.e-btn-group.custom-rbt-group input:checked + label.e.e-btn{
-   background-color: #fff;
-   color: #212b36;
-   border: 1px solid #fff;
+.e-btn-group.custom-rbt-group input:checked + label.e.e-btn {
+    background-color: #12161d;
+    color: #212b36;
+    border: 1px solid #fff;
 }
 /*sidebar*/
 #sidebar {
     background-color: #12161d;
     border-right: 1px dashed rgba(75,82,85,0.24);
     padding: 10px 20px;
+    
 }
+
+
 /*widget*/
 .widget {
     border-radius: 1rem;
